@@ -13,6 +13,6 @@ class AlarmReceiver : BroadcastReceiver() {
         val number = extras.getString("number")
         val message = extras.getString("message")
         val formattedNumber = "(" + number.substring(0, 3) + ")" + number.substring(3, 6) + "-" + number.substring(6)
-        Toast.makeText(context, "Texting " + formattedNumber + "\n" + message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Texting " + formattedNumber + message, Toast.LENGTH_SHORT).show()
     }
 }

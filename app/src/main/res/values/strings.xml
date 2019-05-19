@@ -2,7 +2,7 @@
     <string name="app_name">awty</string>
     <string name="message">Type your message here</string>
     <string name="number">Type the number to nag</string>
-    <string name="interval">Type minutes between nags</string>
+    <string name="interval">Type time interval</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
 </resources>

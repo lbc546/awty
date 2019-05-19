@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val number : EditText = findViewById(R.id.number)
         val nagInterval : EditText = findViewById(R.id.interval)
         val button : Button = findViewById(R.id.button)
+        val intent = Intent(this, AlarmReceiver::class.java)
 
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
         button.setOnClickListener {
@@ -33,7 +34,6 @@ class MainActivity : AppCompatActivity() {
                         button.setBackgroundColor(Color.YELLOW);
                         button.text = getString(R.string.stop)
                         val interval = nagInterval.text.toString().toLong()
-                        val intent = Intent(this, AlarmReceiver::class.java)
                         intent.putExtra("number", number.text.toString())
                         intent.putExtra("message", message.text.toString())
                         val pendingIntent = PendingIntent.getBroadcast(this, 0, intent,  PendingIntent.FLAG_UPDATE_CURRENT)

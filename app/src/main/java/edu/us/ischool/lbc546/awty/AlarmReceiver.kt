@@ -15,6 +15,6 @@ class AlarmReceiver : BroadcastReceiver() {
         val message = extras.getString("message")
         val formattedNumber = "(" + number.substring(0, 3) + ")" + number.substring(3, 6) + "-" + number.substring(6)
         SmsManager.getDefault().sendTextMessage(number,null, message, null, null)
-        Toast.makeText(context, "Texting " + formattedNumber + message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Texting " + formattedNumber + ": "+ message, Toast.LENGTH_SHORT).show()
     }
 }
